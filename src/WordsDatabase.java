@@ -1,7 +1,7 @@
 import java.sql.*;
 
 public class WordsDatabase {
-    String url = "jdbc:sqlite:words.db";
+    String url = "jdbc:sqlite::resource:words.db";
 
     public String getRandomWord(String difficulty) {
         String randomWordQuerry = String.format(
@@ -17,7 +17,7 @@ public class WordsDatabase {
         } catch (SQLException e) {
             System.out.println("An error occurred. Please try again.");
             System.out.println("The word is none");
-            return "None";
+            return "none";
         }
     }
 
